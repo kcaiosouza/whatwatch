@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Contrail+One&display=swap');
+
+* {
+    border-width: 0;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+#background {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    backdrop-filter: blur(.8rem);
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#container {
+    width: 100%;
+    min-height: 100vh;
+    filter: blur(0) opacity(100%);
+    z-index: 10;
+}
+
+section#container {
+    width: 100%;
+    min-height: 100vh;
+    filter: blur(0) opacity(100%);
+    z-index: 10;
+}
+
+section#container img#poster {
+    height: auto;
+    width: 500px;
+
+    margin: calc(27vh - 150px) 0 0 50px;
+
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    position: absolute;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 64px !important;
+    font-family: 'Contrail One', cursive !important;
+    font-weight: bold;
+    color: white;
+}
+.infoOne {
+    display: flex;
+}
+.infoOne h1.title, #rate, .fa-star, .genres, .time ion-icon{
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+.infoTwo .fa-star {
+    color: white;
+}
+.infoTwo {
+    margin-left: 650px;
+    overflow-y: auto;
+    height: 78vh;
+    margin-top: calc(27vh - 150px);
+}
+
+.starRate {
+    display: flex;
+    align-items: flex-start;
+    font-size: 28px;
+}
+
+.starRate #rate {
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+#overview {
+    margin-right: 50px;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#imgPlatform img {
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.generos {
+    display: flex;
+    flex-direction: row;
+}
+
+.genres{
+    margin: 0 10px 10px 0;
+    font-size: 21px;
+    padding: 5px;
+    color: #e4e4e4;
+    border-width: 1px;
+    border-color: #e4e4e4;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.time ion-icon {
+    font-size: 28px;
+    color: white;
+    margin-right: 5px;
+}
+
+.time h2 {
+    font-size: 21px;
+    margin: 0;
+    color: white;
+}
+
+/* LOAD */
+
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171717;
+}
+  
+.retangulo {
+    height: 65px;
+    width: 10px;
+    background-color: white;
+    animation: loading .4s infinite linear;
+    z-index: 9999;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}

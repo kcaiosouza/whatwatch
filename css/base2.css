@@ -16,7 +16,6 @@ main {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	overflow: hidden;
 }
 
 body {
@@ -375,7 +374,7 @@ body {
 footer {
   width:100vw;
   position:fixed;
-  bottom:0px
+  bottom:-5px
 }
 footer div {
   background-color:#fff;
@@ -389,7 +388,7 @@ svg {
 }
 
 .wave {
-  animation: wave 5.5s linear;
+  /* animation:  5.5s linear; */
   animation-iteration-count:infinite;
   fill: #fff;
 }

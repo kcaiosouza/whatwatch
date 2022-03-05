@@ -50,6 +50,11 @@ crossorigin="anonymous"></script>
                 console.log(urlImgs.imagens[numberUrlImg]);
                 document.getElementById('grid_capa-filme7').style.backgroundImage = "url('"+urlImgs.imagens[numberUrlImg]+"')";
             }
+            function setImg8() {
+                let numberUrlImg = (Math.random() * (numberOfImgs - 0) + 0).toFixed(0);
+                console.log(urlImgs.imagens[numberUrlImg]);
+                document.getElementById('grid_capa-filme8').style.backgroundImage = "url('"+urlImgs.imagens[numberUrlImg]+"')";
+            }
             
             
             setImg1();
@@ -59,6 +64,7 @@ crossorigin="anonymous"></script>
             setImg5();
             setImg6();
             setImg7();
+            setImg8();
             // console.log(urlImgs.imagens);
 });
     </script>
@@ -79,20 +85,25 @@ crossorigin="anonymous"></script>
             <div class="content">
                 <div class="grid grid--img">
                     <div class="grid__item pos-1"><div id="grid_capa-filme1" class="grid__item-img"></div></div>
-                    <div class="grid__item pos-3"><div id="grid_capa-filme2" class="grid__item-img"></div></div>
-                    <div class="grid__item pos-4"><div id="grid_capa-filme3" class="grid__item-img"></div></div>
-                    <div class="grid__item pos-5"><div id="grid_capa-filme4" class="grid__item-img"></div></div>
-                    <div class="grid__item pos-6"><div id="grid_capa-filme5" class="grid__item-img"></div></div>
-                    <div class="grid__item pos-8"><div id="grid_capa-filme6" class="grid__item-img"></div></div>
-                    <div class="grid__item pos-10"><div id="grid_capa-filme7" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-2"><div id="grid_capa-filme2" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-3"><div id="grid_capa-filme3" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-4"><div id="grid_capa-filme4" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-5"><div id="grid_capa-filme5" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-6"><div id="grid_capa-filme6" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-8"><div id="grid_capa-filme7" class="grid__item-img"></div></div>
+                    <div class="grid__item pos-10"><div id="grid_capa-filme8" class="grid__item-img"></div></div>
                 </div>
-                <h2 class="content__title no-select">
-                    <img src="./images/home_logo.png" alt="Logo">
-                </h2>
+                <div class="content__title">
+                    <img src="./images/home_logo.png" width="500px" height="auto" alt="Logo">
+                    <div class="content__btn">
+                        <div onclick="location.href='./raffle.html'">RAFFLE</div>
+                        <div>SIGN UP</div>
+                    </div>
+                </div>
             </div>
     </main>
     <footer>
-        <svg viewBox="0 0 120 28">
+        <svg viewBox="0 0 120 20">
          <defs> 
            <mask id="xxx">
              <circle cx="7" cy="12" r="40" fill="#fff" />
@@ -110,17 +121,17 @@ crossorigin="anonymous"></script>
              <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
           </defs> 
         
-           <use id="wave3" class="wave" xlink:href="#wave" x="0" y="5" ></use> 
-           <use id="wave2" class="wave" xlink:href="#wave" x="0" y="6" ></use>
+           <use id="wave3" class="wave" xlink:href="#wave" x="0" y="1" ></use> 
+           <use id="wave2" class="wave" xlink:href="#wave" x="0" y="2" ></use>
          
           <g class="gooeff">
-          <circle class="drop drop1" cx="20" cy="2" r="1.8"  />
-          <circle class="drop drop2" cx="25" cy="2.5" r="1.5"  />
-          <circle class="drop drop3" cx="16" cy="2.8" r="1.2"  />
-            <use id="wave1" class="wave" xlink:href="#wave" x="0" y="8" />
+          <!-- <circle class="drop drop1" cx="20" cy="10" r="1.8"  />
+          <circle class="drop drop2" cx="25" cy="10.5" r="1.5"  />
+          <circle class="drop drop3" cx="16" cy="10.8" r="1.2"  /> -->
+            <use id="wave1" class="wave" xlink:href="#wave" x="0" y="3" />
         </svg>
         
-        <div>WhatWatch by Mink</div>
+        <div style="color: #000; font-weight: bold;">WhatWatch by Mink</div>
     </footer>
 
     <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
