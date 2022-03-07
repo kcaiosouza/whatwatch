@@ -61,7 +61,7 @@ h1 {
     height: 100vh;
     align-items: center;
 }
-.infoOne h1.title, #rate, .fa-star, .genres, .time ion-icon{
+.infoOne h1.title, #rate, .fa-star, .genres, .time{
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 .infoTwo .fa-star {
@@ -72,6 +72,7 @@ h1 {
     overflow-y: auto;
     height: 78vh;
     margin-top: calc(13vh - 150px);
+    width: 100%;
 }
 
 .starRate {
@@ -118,7 +119,7 @@ h1 {
     margin-bottom: 7px;
 }
 
-.time ion-icon {
+.time span {
     font-size: 28px;
     color: white;
     margin-right: 5px;
@@ -166,5 +167,27 @@ h1 {
     }
 }
 
+/* Scroll */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4949499a;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4e4e4e; 
+}
+
 /* Responsivo */
 
+@media (max-width: 1160px) {
+    
+}
