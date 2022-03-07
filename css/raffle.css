@@ -4,10 +4,6 @@
     border-width: 0;
 }
 
-body {
-    overflow-y: hidden;
-}
-
 #background {
     width: 100%;
     height: 40vh;
@@ -60,6 +56,7 @@ h1 {
     display: flex;
     height: 100vh;
     align-items: center;
+    flex-direction: row;
 }
 .infoOne h1.title, #rate, .fa-star, .genres, .time{
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
@@ -69,7 +66,7 @@ h1 {
 }
 .infoTwo {
     margin-left: calc(52vh + 100px);
-    overflow-y: auto;
+    overflow-y: scroll;
     height: 78vh;
     margin-top: calc(13vh - 150px);
     width: 100%;
@@ -188,6 +185,42 @@ h1 {
 
 /* Responsivo */
 
-@media (max-width: 1160px) {
-    
+@media (max-width: 1234px) {
+    .infoOne {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+    }
+    section#container img#poster {
+        height: auto;
+        width: 52vh;
+        margin: calc(27vh - 150px) 0 0 0;
+        box-shadow: 0 0 5px rgb(255 255 255 / 30%);
+        position: absolute;
+    }
+    .infoTwo {
+        margin-left: 0;
+        height: auto;
+        margin-top: calc(110vh - 150px);
+        width: 70%;
+        overflow-y: unset;
+    }
+}
+
+@media (max-width: 1000px) {
+    section#container img#poster {
+        height: auto;
+        width: 40vh;
+        margin: calc(27vh - 150px) 0 0 0;
+        box-shadow: 0 0 5px rgb(255 255 255 / 30%);
+        position: absolute;
+    }
+    .infoTwo {
+        margin-left: 0;
+        height: auto;
+        margin-top: calc(90vh - 150px);
+        width: 70%;
+        overflow-y: unset;
+    }
 }
