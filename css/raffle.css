@@ -185,6 +185,45 @@ h1 {
 
 /* Responsivo */
 
+@media (max-width: 1600px) {
+    .title {
+        font-size: 60px !important;
+        font-family: 'Contrail One', cursive !important;
+        font-weight: bold;
+        color: white;
+    }
+    .starRate {
+        display: flex;
+        align-items: flex-start;
+        font-size: 20px;
+    }
+    #overview {
+        margin-right: 50px;
+        margin-top: 0;
+        font-size: 25px;
+    }
+    .genres{
+        margin: 0 10px 10px 0;
+        font-size: 15px;
+        padding: 5px;
+        color: #e4e4e4;
+        border-width: 1px;
+        border-color: #e4e4e4;
+        border-radius: 5px;
+        border-style: solid;
+    }
+    .time span {
+        font-size: 22px;
+        color: white;
+        margin-right: 5px;
+    }
+    .time h2 {
+        font-size: 16px;
+        margin: 0;
+        color: white;
+    }
+}
+
 @media (max-width: 1234px) {
     .infoOne {
         display: flex;
@@ -222,5 +261,58 @@ h1 {
         margin-top: calc(90vh - 150px);
         width: 70%;
         overflow-y: unset;
+    }
+}
+
+@media (max-width: 500px) {
+    section#container img#poster {
+        height: auto;
+        width: 32vh;
+        margin: calc(27vh - 150px) 0 0 0;
+        box-shadow: 0 0 5px rgb(255 255 255 / 30%);
+        position: absolute;
+    }
+    .infoTwo {
+        margin-left: 0;
+        height: auto;
+        margin-top: calc(76vh - 150px);
+        width: 70%;
+        overflow-y: unset;
+    }
+    #overview {
+        margin-right: 0;
+        margin-top: 0;
+        font-size: 22px;
+    }
+    .title {
+        font-size: 55px !important;
+        font-family: 'Contrail One', cursive !important;
+        font-weight: bold;
+        color: white;
+    }
+    .starRate {
+        display: flex;
+        align-items: flex-start;
+        font-size: 20px;
+    }
+    .genres{
+        margin: 0 10px 10px 0;
+        font-size: 15px;
+        padding: 5px;
+        color: #e4e4e4;
+        border-width: 1px;
+        border-color: #e4e4e4;
+        border-radius: 5px;
+        border-style: solid;
+    }
+    .time span {
+        font-size: 22px;
+        color: white;
+        margin-right: 5px;
+    }
+    .time h2 {
+        font-size: 16px;
+        margin: 0;
+        color: white;
     }
 }
