@@ -17,7 +17,7 @@
         var linkImageBG = "https://image.tmdb.org/t/p/w1920_and_h1080_bestv2";
         var linkImagePoster = "https://image.tmdb.org/t/p/w600_and_h900_bestv2";
 
-        $.getJSON('https://api.themoviedb.org/3/discover/movie?api_key=c14a5e48b924e8f71f90d1fe90ccd44b&language=pt-BR&include_adult=false&primary_release_date.gte=2017-01-01&primary_release_date.lte=2022-01-15&vote_average.gte=6&page=' + choosedPage, function(data) {
+        $.getJSON('https://api.themoviedb.org/3/discover/movie?api_key=c14a5e48b924e8f71f90d1fe90ccd44b&language=pt-BR&include_adult=false&primary_release_date.gte=2017-01-01&primary_release_date.lte=2022-01-15&vote_average.gte=5.5&page=' + choosedPage, function(data) {
             var listOfFilms = data;
             var choosedNumberFilm = (Math.random() * (20 - 1) + 0).toFixed(0);
             var idFilm = listOfFilms.results[choosedNumberFilm].id;
