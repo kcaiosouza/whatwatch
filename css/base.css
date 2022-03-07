@@ -165,7 +165,7 @@ a:focus {
 	pointer-events: none;
 	position: absolute;
 	width: 110%;
-	height: 110%;
+	height: 105vh;
 	top: -5%;
 	left: -5%;
 	display: grid;
@@ -295,7 +295,7 @@ a:focus {
 	display: none;
 }
 
-@media screen and (min-width: 53em) {
+@media screen and (max-width: 9999em) {
 	.message {
 		display: none;
 	}
@@ -366,6 +366,46 @@ a:focus {
 	}
 }
 
+@media (max-width: 1000px){
+	.content__title img {
+		width: 500px !important;
+		height: 500px !important;
+	}
+}
+
+@media (max-width: 615px){
+	.content__title img {
+		width: 350px !important;
+		height: 350px !important;
+	}
+	.content__btn {
+		top: -100px;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		z-index: 9999;
+	}
+}
+
+@media (max-width: 375px){
+	.content__title img {
+		width: 290px !important;
+		height: 290px !important;
+	}
+	.content__btn {
+		top: -80px;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		z-index: 9999;
+	}
+}
 /* Waves */
 
 body {
