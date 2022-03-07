@@ -34,9 +34,9 @@ section#container {
 
 section#container img#poster {
     height: auto;
-    width: 500px;
+    width: 52vh;
 
-    margin: calc(27vh - 150px) 0 0 50px;
+    margin: calc(13vh - 150px) 0 0 50px;
 
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     position: absolute;
@@ -58,6 +58,8 @@ h1 {
 }
 .infoOne {
     display: flex;
+    height: 100vh;
+    align-items: center;
 }
 .infoOne h1.title, #rate, .fa-star, .genres, .time ion-icon{
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
@@ -66,10 +68,10 @@ h1 {
     color: white;
 }
 .infoTwo {
-    margin-left: 650px;
+    margin-left: calc(52vh + 100px);
     overflow-y: auto;
     height: 78vh;
-    margin-top: calc(27vh - 150px);
+    margin-top: calc(13vh - 150px);
 }
 
 .starRate {
@@ -151,6 +153,10 @@ h1 {
     z-index: 9999;
 }
 
+#nameAndYear {
+    margin-top: 18px;
+}
+
 @keyframes loading {
     0% {
         transform: rotate(0deg);
@@ -159,3 +165,6 @@ h1 {
         transform: rotate(359deg);
     }
 }
+
+/* Responsivo */
+
