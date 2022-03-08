@@ -22,18 +22,31 @@
             var choosedNumberFilm = (Math.random() * (20 - 1) + 0).toFixed(0);
             var idFilm = listOfFilms.results[choosedNumberFilm].id;
 
-            function createShareBtn() {
+            $.getJSON('https://api.themoviedb.org/3/movie/'+ idFilm +'?api_key=c14a5e48b924e8f71f90d1fe90ccd44b&language=pt-BR', function(data){
+                var choosedFilm = data;
+
+                function createShareBtn() {
                 var iconShare = document.createElement('span');
                 iconShare.className = "fa fa-share"
-                iconShare.onclick = ()=>{navigator.clipboard.writeText("https://www.whatwatch.live/share.html#"+idFilm).then(alert("Link copiado com sucesso")); };
+                // iconShare.onclick = ()=>{navigator.clipboard.writeText("https://www.whatwatch.live/share.html#"+idFilm).then(alert("Link copiado com sucesso")); };
+                iconShare.onclick = async ()=>{
+                    var shareData = {
+                        title: choosedFilm.title,
+                        text: 'Olha esse filme que eu encontrei! Vamos assistir?',
+                        url: 'https://whatwatch.live/share.html#'+idFilm
+                    }
+                    try {
+                        await navigator.share(shareData)
+                    } catch(err) {
+                        alert("Erro: " + err)
+                    }
+                        console.log("Compartilhado com sucesso");
+                };
                 iconShare.style = "margin-left: 10px; color: #FFF";
                 document.getElementById('starsRateAndShareBTN').appendChild(iconShare);
                 
             }
             createShareBtn()
-
-            $.getJSON('https://api.themoviedb.org/3/movie/'+ idFilm +'?api_key=c14a5e48b924e8f71f90d1fe90ccd44b&language=pt-BR', function(data){
-                var choosedFilm = data;
 
                 // BUSCAR AS PLATAFORMAS
                 $.getJSON('https://api.themoviedb.org/3/movie/'+idFilm+'/watch/providers?api_key=c14a5e48b924e8f71f90d1fe90ccd44b', function(data){
