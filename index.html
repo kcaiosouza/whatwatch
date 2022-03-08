@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta name="description" content="O melhor site de randomização de filmes, quando estiver indeciso no que assistir, dê um WhatWatch!">
+    <meta name="keywords" content="WhatWatch, o que assistir, indicar filmes, indicar series, sortear filme, sortear serie">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@ src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
     <script>
+        // https://api.bigdatacloud.net/data/ip-geolocation?key=209724fb28224d21a9076a2e9f16a62b
         $.getJSON('./json/images.json', function(data) {
             var urlImgs = data;
             var numberOfImgs = urlImgs.imagens.length;
@@ -97,7 +99,7 @@ crossorigin="anonymous"></script>
                 <div class="content__title">
                     <img src="./images/home_logo.png" width="500px" height="auto" alt="Logo">
                     <div class="content__btn">
-                        <div onclick="location.href='./raffle.html'">RAFFLE</div>
+                        <div onclick="location.href='./raffle.html'">SORTEAR</div>
                         <!--div>SIGN UP</div-->
                     </div>
                 </div>
