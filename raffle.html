@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
+    <meta name="description" content="O melhor site de randomização de filmes, quando estiver indeciso no que assistir, dê um WhatWatch!">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,19 +29,19 @@
                 var iconShare = document.createElement('span');
                 iconShare.className = "fa fa-share"
                 // iconShare.onclick = ()=>{navigator.clipboard.writeText("https://www.whatwatch.live/share.html#"+idFilm).then(alert("Link copiado com sucesso")); };
-                iconShare.onclick = async ()=>{
-                    var shareData = {
-                        title: choosedFilm.title,
-                        text: 'Olha esse filme que eu encontrei! Vamos assistir?',
-                        url: 'https://whatwatch.live/share.html#'+idFilm
-                    }
-                    try {
-                        await navigator.share(shareData)
-                    } catch(err) {
-                        alert("Erro: " + err)
-                    }
-                        console.log("Compartilhado com sucesso");
-                };
+                var isMobile = window.orientation > -1;
+                if(isMobile == true) {
+                    iconShare.onclick = ()=>{
+                        var shareData = {
+                            title: choosedFilm.title,
+                            text: 'Olha esse filme que eu encontrei! Vamos assistir?',
+                            url: 'https://whatwatch.live/share.html#'+idFilm
+                        }
+                         navigator.share(shareData)
+                    };
+                }else{
+                    iconShare.onclick = ()=>{navigator.clipboard.writeText("https://www.whatwatch.live/share.html#"+idFilm).then(alert("Link copiado com sucesso")); };
+                }
                 iconShare.style = "margin-left: 10px; color: #FFF";
                 document.getElementById('starsRateAndShareBTN').appendChild(iconShare);
                 
