@@ -58,7 +58,7 @@ h1 {
     align-items: center;
     flex-direction: row;
 }
-.infoOne h1.title, #rate, .fa-star, .genres, .time{
+.infoOne h1.title, #rate, .fa-star, .genres, .time, .fa-share{
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 .infoTwo .fa-star {
@@ -126,6 +126,10 @@ h1 {
     font-size: 21px;
     margin: 0;
     color: white;
+}
+
+.fa-share:hover {
+    cursor: pointer;
 }
 
 /* LOAD */
